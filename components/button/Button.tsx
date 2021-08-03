@@ -9,7 +9,7 @@ export type ButtonType = 'default' | 'success' | 'danger' | 'waring' | 'info' | 
 export type ButtonSize = 'default' | 'small' | 'large' | number;
 
 export const ButtonType:Array<ButtonType> = ['success','danger','waring','info'];
-export const ButtonSize:Array<ButtonSize> = ['default','small','large']
+export const ButtonSize:Array<ButtonSize> = ['default','small','large'];
 
 export default defineComponent({
   name:"JButton",
