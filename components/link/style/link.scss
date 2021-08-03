@@ -1,0 +1,47 @@
+@import "../../styles/__variable/colors.scss";
+
+.j-link{
+  outline: none;
+  cursor: pointer;
+  user-select:unset;
+  text-decoration: none;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+
+  // link color
+  @each $name,$val in $colors {
+    @each $subName,$v in $val{
+      &-#{$name}--#{$subName}{
+        color: $v;
+        @if $subName != 'disabled' {
+          &:hover {
+            color: rgba($color: $v,$alpha: .8);
+          }
+          &.is-underline {
+            &:hover {
+              &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                top: 0;
+                border-bottom: 1px solid $v;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // disabled link
+  &.is-disabled{
+    cursor: not-allowed;
+  }
+}

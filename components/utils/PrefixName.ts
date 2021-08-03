@@ -5,6 +5,7 @@ export type ObjectType<T> = {
 export const getPrefixName = (componentName:string,obj:ObjectType<any>)=>{
   let globalClass = `j-${componentName}`;
   let classNames = `${globalClass} `;
+  let keyList = ['type','status','size']
   Object.keys(obj).forEach((key:string) => {
     const val = obj[key];
     if(key === 'type'){
@@ -15,6 +16,9 @@ export const getPrefixName = (componentName:string,obj:ObjectType<any>)=>{
     }
     if(key === 'size' && val){
       classNames += `${globalClass}--${val}`
+    }
+    if(keyList.indexOf(key) === -1 && val) {
+      classNames += val
     }
   })
   return classNames;
