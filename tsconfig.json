@@ -1,5 +1,6 @@
 {
   "compilerOptions":{
+    "declaration":true,
     "jsx": "preserve",
     "jsxFactory": "VueTsxSupport",
     "target": "esnext",

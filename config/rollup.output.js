@@ -40,7 +40,8 @@ const output = [];
     dir:path,
     format:"es",
     globals,
-    name:packageJson.name
+    name:packageJson.name,
+    sourcemap:true
   })
 // }
 

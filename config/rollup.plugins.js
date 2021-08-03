@@ -24,7 +24,9 @@ export default [
     lib:['es5','es6','dom'],
     target:'es5',
     noEmitOnError:true,
-    sourceMap:true
+    sourceMap:true,
+    exclude:["**/__test__/**","**/style/"],
+    outDir:resolve(__dirname,"lib/types/")
   }),
   NodeResolve({mainFields:['module','main','browser']}),
   commonjs({extensions,sourceMap:true}),

@@ -1,5 +1,5 @@
 {
-  "name": "ui_component",
+  "name": "@season/ui_component",
   "version": "1.0.0",
   "main": "lib/index.js",
   "keywords": [
@@ -12,6 +12,9 @@
     "build": "cross-env NODE_ENV=production rollup -c",
     "test": "jest --coverage --verbose -u"
   },
+  "files": [
+    "lib"
+  ],
   "devDependencies": {
     "@babel/core": "^7.14.8",
     "@babel/plugin-syntax-jsx": "^7.14.5",
@@ -33,7 +36,7 @@
     "typescript": "^4.3.5",
     "vue": "^3.1.5",
     "vue3-jest": "^27.0.0-alpha.1",
-    "cssnano": "^5.0.7",
+    "d": "^5.0.7",
     "postcss": "^8.3.6"
   },
   "dependencies": {
