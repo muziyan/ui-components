@@ -4,8 +4,9 @@
 
 <script setup>
 import {ref} from "vue"
-import {Button} from "../../lib/index"
-import "../../lib/style/index.css"
+import {Button} from "ui_component_jixiaoqi"
+import "ui_component_jixiaoqi/lib/style/index.css"
+
 let type = ref("info")
 const handleClick = () => {
   type.value = "danger"

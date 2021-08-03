@@ -16,10 +16,10 @@ const globals = {
 }
 
 // 编译模式
-export const isPro = process.env.NODE_ENV === "production";
+// export const isPro = process.env.NODE_ENV === "production";
 
 // 是否是生产环境
-const path = isPro ? "./lib/" : "./dist";
+// const path = isPro ? "./lib/" : "./dist";
 
 // output 完全依赖于rollup的output规则，
 // [iife、es、umd] 对应三种不同打包的使用场景.
@@ -37,7 +37,7 @@ const output = [];
   // })
 // } else {
   output.push({
-    dir:path,
+    dir:"./lib",
     format:"es",
     globals,
     name:packageJson.name,

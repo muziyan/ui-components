@@ -1,16 +1,23 @@
 {
-  "name": "@season/ui_component",
-  "version": "1.0.0",
+  "name": "ui_component_jixiaoqi",
+  "version": "0.0.1",
+  "private":false,
+  "description": "vue3 jsx ui component test",
   "main": "lib/index.js",
   "keywords": [
     "vue"
   ],
+  "repository": {
+    "type":"git",
+    "url":"https://github.com/muziyan/ui-components.git"
+  },
   "author": "jixiaoqi",
   "license": "MIT",
   "scripts": {
     "dev": "rollup -c --watch",
     "build": "cross-env NODE_ENV=production rollup -c",
-    "test": "jest --coverage --verbose -u"
+    "test": "jest --coverage --verbose -u",
+    "publish": "yarn build && npm publish"
   },
   "files": [
     "lib"
