@@ -50,6 +50,7 @@ export default defineComponent({
     return () => {
       // 返回点击事件
       const handleClick = () => {
+        if(props.disabled || props.loading) return false;
         emit("click");
       }
 
