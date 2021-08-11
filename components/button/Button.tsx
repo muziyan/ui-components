@@ -1,4 +1,4 @@
-import { getPrefixName } from "../utils/PrefixName";
+import { getPrefixName } from "../utils/prefixName";
 import {defineComponent,unref,PropType, computed} from "vue"
 
 // button component 

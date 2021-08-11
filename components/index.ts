@@ -6,6 +6,9 @@ import * as components from "./components"
 // 按需加载,需要先全部引入
 export * from "./components";
 
+// 工具函数
+export * from "./utils"
+
 import "./style"
 
 export const install = function(app:App){

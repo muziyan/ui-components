@@ -12,7 +12,10 @@ import output from "./config/rollup.output"
 import plugins from "./config/rollup.plugins"
 
 export default{
-  input:"./components/index.ts",   // 打包主文件
+  input:{
+    index:"./components/index.ts",
+    components:"./components/**"
+  },   // 打包主文件
   output,                          // 输出文件
   plugins,                         // 插件
   acornInjectPlugins:[jsx()],           

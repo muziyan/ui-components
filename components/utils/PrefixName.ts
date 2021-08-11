@@ -1,5 +1,3 @@
-import components from "components";
-
 export type ObjectType<T> = {
   [key:string]:T
 }

@@ -4,8 +4,10 @@
 
 <script setup>
 import {ref} from "vue"
-import {Button} from "../../lib"
+import {Button,WebStorage} from "../../lib"
 import "../../lib/style/index.css"
+
+console.log(WebStorage)
 
 let type = ref("text")
 const handleClick = () => {
