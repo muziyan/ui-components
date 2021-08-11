@@ -1,4 +1,4 @@
-@import "../../styles/__variable/colors.scss";
+@import "../../styles/mixin/mixinColor.scss";
 
 @mixin button-size($width : 120px,$height : 35px,$font-size:16px) {
   width: $width;
@@ -24,29 +24,13 @@
     @include button-size(160px,45px,18px);
   }
 
-  // button color
-  @each $name,$val in $colors {
-    @each $subName,$v in $val{
-      &-#{$name}--#{$subName}{
-        @if $subName == 'light' {
-          color:#bbb;
-        }@else{
-          color:#fff;
-        }
-        background-color: $v;
-        border:1px solid rgba($color: $v, $alpha: .9);
-        box-shadow: 0px 4px 4px rgba($color: $v, $alpha: .25);
-
-        &:hover{
-          background-color: rgba($color: $v, $alpha: .8);
-          border:1px solid rgba($color: $v, $alpha: .6);
-        }
-      }
-    }
-  }
+  @include mixinBgColors(#{&});
+  @include mixinTextColors(#{&});
+  
 
   // disabled button
-  &-disabled{
+  &-disabled,
+  &-loading{
     cursor: unset;
   }
 }

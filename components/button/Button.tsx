@@ -5,10 +5,10 @@ import {defineComponent,unref,PropType, computed} from "vue"
 // type is button color style
 // 
 
-export type ButtonType = 'default' | 'success' | 'danger' | 'waring' | 'info' | string;
+export type ButtonType = 'default' | 'success' | 'danger' | 'waring' | 'info' | 'text' | string;
 export type ButtonSize = 'default' | 'small' | 'large' | number;
 
-export const ButtonType:Array<ButtonType> = ['success','danger','waring','info'];
+export const ButtonType:Array<ButtonType> = ['success','danger','waring','info','text'];
 export const ButtonSize:Array<ButtonSize> = ['default','small','large'];
 
 export default defineComponent({
@@ -58,7 +58,7 @@ export default defineComponent({
         type:props.type === 'default' ? 'primary' : props.type,
         status:props.disabled ? "disabled" : "default",
         size:props.size === 'default' ? null : props.size 
-      }))
+      },props.type === 'text' ? 'text' : 'bg'))
 
       const defaultText = slots.default?.() || ""
 
